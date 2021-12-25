@@ -1,5 +1,26 @@
-.main-content {
-    display: grid;
-    grid-auto-rows: minmax(24.2rem, auto);
-    row-gap: 1rem;
+.clock {
+    border-width: 2px;
+    border-style: solid;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.inner-clock {
+    border-width: 2px;
+    border-style: solid;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    margin: 11% 0% 2% 12%;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    border: black solid 1px;
+    width: 2.5rem;
+    margin-right: 0.2rem;
 }

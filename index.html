@@ -10,15 +10,99 @@
     <title>Hello World</title>
 </head>
 
-<body>
+<body onload="setTodayDate()">
     <main class="main-content">
+        <form action="send.php" method="post" id="myform">
+            <div>
+                <input type="date" id="datefield" value="" onchange="refreshtime()">
+            </div>
+            <!-- <div>
+                start time
+                <input type="time" id="StartTime">
+            </div>
+            <div>
+                end time
+                <input type="time" id="EndTime">
+            </div> -->
 
-        <section class="top">
-            left
-        </section>
-        <section class="bottom">
-            right
-        </section>
+            <div class="clock">
+                <div class="inner-clock"></div>
+                <div class="time" id="01">
+                    <p> 12 AM </p>
+                </div>
+                <div class="time" id="02">
+                    <p>1 AM </p>
+                </div>
+                <div class="time" id="03">
+                    <p>2 AM </p>
+                </div>
+                <div class="time" id="04">
+                    <p>3 AM </p>
+                </div>
+                <div class="time" id="05">
+                    <p>4 AM </p>
+                </div>
+                <div class="time" id="06">
+                    <p>5 AM </p>
+                </div>
+                <div class="time" id="07">
+                    <p>6 AM </p>
+                </div>
+                <div class="time" id="08">
+                    <p>7 AM </p>
+                </div>
+                <div class="time" id="09">
+                    <p>8 AM </p>
+                </div>
+                <div class="time" id="10">
+                    <p>9 AM </p>
+                </div>
+                <div class="time" id="11">
+                    <p>10 AM </p>
+                </div>
+                <div class="time" id="12">
+                    <p>11 AM </p>
+                </div>
+                <div class="time" id="13">
+                    <p>12 PM </p>
+                </div>
+                <div class="time" id="14">
+                    <p>1 PM </p>
+                </div>
+                <div class="time" id="15">
+                    <p>2 PM </p>
+                </div>
+                <div class="time" id="16">
+                    <p>3 PM </p>
+                </div>
+                <div class="time" id="17">
+                    <p>4 PM </p>
+                </div>
+                <div class="time" id="18">
+                    <p>5 PM </p>
+                </div>
+                <div class="time" id="19">
+                    <p>6 PM </p>
+                </div>
+                <div class="time" id="20">
+                    <p>7 PM </p>
+                </div>
+                <div class="time" id="21">
+                    <p>8 PM </p>
+                </div>
+                <div class="time" id="22">
+                    <p>9 PM </p>
+                </div>
+                <div class="time" id="23">
+                    <p>10 PM </p>
+                </div>
+                <div class="time" id="24">
+                    <p>11 PM </p>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
     </main>
 </body>
 
