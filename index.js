@@ -1,27 +1,41 @@
-function refreshtime() {
-    let StartTime = document.getElementById("StartTime").value
-    let EndTime = document.getElementById("EndTime").value
+const selected = "brown";
+const reset = "white";
+const times = {
+    date: "",
+    arrayoftime: []
+}
+let AOb = [];
 
-    if (StartTime.length == 0 || EndTime.length == 0) {
-        window.alert("fill both inputs")
-    } else {
-        gettime(StartTime, EndTime)
+function refreshtime() {
+    let date = document.getElementById('incredible').value
+    PowerOn(date)
+    for (let i = 0; i < 24; i++) {
+        document.getElementById(i).style.backgroundColor = reset;
     }
 
-    document.getElementById("StartTime").value = "";
-    document.getElementById("EndTime").value = "";
 }
 
-function gettime(startTime, EndTime) {
-    let times = []
-    times.push(startTime)
-    times.push(EndTime)
-
-    console.log(times[0])
-    console.log(times[1])
+function getcurrentdate() {
+    document.getElementById('incredible').value = document.getElementById('datefield').value
 }
 
+function PowerOn(date) {
+    let period = []
+    for (let i = 0; i < 24; i++) {
+        let element = document.getElementById(i)
+        if (element.style.backgroundColor == selected) {
+            period.push(i)
+        }
+    }
 
+    const one = Object.create(times);
+
+    one.date = date
+    one.arrayoftime = period
+
+    AOb.push(one)
+
+}
 
 function setTodayDate() {
     console.log("something");
@@ -41,4 +55,23 @@ function setTodayDate() {
 
     today = yyyy + '-' + mm + '-' + dd;
     document.getElementById("datefield").value = today;
+}
+
+function select(id) {
+    let time = document.getElementById(id)
+
+    if (time.style.backgroundColor != selected) {
+        time.style.backgroundColor = selected
+    } else {
+        time.style.backgroundColor = reset
+    }
+
+}
+
+
+function printarray() {
+
+    for (let i = 0; i < AOb.length; i++) {
+        console.log(AOb[i]);
+    }
 }
